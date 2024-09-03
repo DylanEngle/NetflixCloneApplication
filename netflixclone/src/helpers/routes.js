@@ -9,3 +9,11 @@ export function IsUserRedirect({ user, loggedInPath, children }) {
   return children;
 }
 
+export function ProtectedRoute({user, children, ...rest}){
+    if(user){
+        return children;
+    }
+    if(!user){
+        <Navigate to={{pathname:'signin'}}></Navigate>
+    }
+}
