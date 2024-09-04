@@ -2,10 +2,11 @@ import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import {Home, Browse, Signin, Signup} from './pages';
 import * as ROUTES from './constants/routes';
-import { IsUserRedirect } from './helpers/routes';
+import { IsUserRedirect, ProtectedRoute } from './helpers/routes';
+import { useAuthListener } from './hooks';
 
 function App() {
-  const user = {};
+  const { user } = useAuthListener();
   return (
     <BrowserRouter>
       <Routes>
@@ -18,7 +19,11 @@ function App() {
             }
           />
           
-        <Route exact path={ROUTES.BROWSE} index element={<Browse></Browse>}/>
+          
+          <Route element={<ProtectedRoute user={user} />}>
+          <Route path={ROUTES.BROWSE} element={<Browse />} />
+        </Route>
+          
           
         <Route
             path={ROUTES.SIGN_IN}
