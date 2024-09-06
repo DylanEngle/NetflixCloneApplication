@@ -3,9 +3,9 @@ import {Spinner, LockBody, Picture, ReleaseBody} from './styles/loading';
 
 function Loading({src, ...restProps}){
     return(
-        <Spinner>
+        <Spinner {...restProps}>
             <LockBody></LockBody>
-            <Picture src={`/images/user/${src}.png`} data-testid="loading-picture"/>
+            <Picture src={`/images/users/${src}.png`} data-testid="loading-picture"/>
         </Spinner>
     )
 }
