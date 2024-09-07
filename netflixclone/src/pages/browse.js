@@ -9,7 +9,7 @@ function Browse(){
     
     const slides = selectionFilter({series,films});
     return(
-        <BrowseContainer></BrowseContainer>
+        <BrowseContainer slides={slides}></BrowseContainer>
     );
 }
 
