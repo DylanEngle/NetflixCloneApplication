@@ -1,6 +1,8 @@
 # NetflixCloneApplication
 This is a application that is a clone of Netflix's main UI and functionality. This is an educational endeavour so I can get more familiar with React and Firebase.
 
+Note: The firebase app used for functionality of website is no longer active.
+
 Features: 
 - Technologies Used: React, JavaScript, Node.js, npm, Webpack, Firebase
 
