@@ -3,7 +3,7 @@ This is a application that is a clone of Netflix's main UI and functionality. Th
 
 Note: The firebase app used for functionality of movie/series/user components is no longer active.
 
-This project is inspired by Karl Hadwen's tutorial on Youtube.
+This project is inspired by Karl Hadwen's Youtube.
 
 Features: 
 - Technologies Used: React, JavaScript, Node.js, npm, Webpack, Firebase
